@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/header_file.css">
+<link rel="stylesheet" type="text/css" href="/static/css/footer_file.css">
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+</head>
+    <!-- <body> -->
+    <!-- <body style=" background-size: 100% 100%; background-repeat: no-repeat; background-image: url('/static/img/background.jpg');"> -->
+    <body style="background-color:rgb(127, 195, 255);">
+    {% include "header.html" %}
+    <div id="loader">
+        <p class="glow">Deployed Model</p>
+        <img src="/static/image/mnist-sample.png" alt="Mnist Numbers">
+        <div>
+            <!-- <form action="/Face_Detection/"><button class="registerbtn button1"><span>Face Detection</span></button></form> -->
+            <form action="/mnist/"><button class="registerbtn button3"><span>Predict MNIST number</span></button></form>
+        </div>
+        
+    </div>
+    </body>
+    {% extends "footer.html" %}
+    {% block footer%}fixed{% endblock %}
+</html>

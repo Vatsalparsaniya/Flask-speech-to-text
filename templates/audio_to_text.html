@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="/static/css/header_file.css">
+<link rel="stylesheet" type="text/css" href="/static/css/footer_file.css">
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+<link rel="stylesheet" type="text/css" href="/static/css/mnist_home.css">
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/app.js"></script>
+<script type="text/javascript" src="/static/js/recorder.js"></script>
+
+<script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}   
+</script>
+<script language="JavaScript" type="text/javascript" src="/static/js/predictbtn_mnist.js"></script>
+
+</head>
+    <body style="background-color:rgb(127, 195, 255);">
+    {% include "header.html" %}
+    
+    <div id="loader">
+        <p class="glow">SPEECH to TEXT</p>
+    </div>
+
+    <div id="loader">
+        <div class="row " style="position:relative;">
+            <div class="column1">
+
+                <h2>Record Audio</h2>
+                <!-- <form id="upload-file-model" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" id="imgInp" onchange="readURL(this);" accept=".png, .jpg, .jpeg">
+                    <label for="imgInp">Browse Image...</label>
+                </form>
+
+                    <button id="predbtn">Predict MNIST</button>
+                    
+                    <h2>Image Preview</h2>
+                    <img id="blah" src="#" alt="your image" /> -->
+                    <div id="controls" style="margin:auto;">
+                        <button id="recordButton">Record</button>
+                        <button id="pauseButton" disabled>Pause</button>
+                        <button id="stopButton" disabled>Stop</button>
+                     </div>
+                     <div id="formats" style="margin:auto;"></div>
+                       <ul style="list-style-type:none; margin:auto; padding:0;" id="recordingsList"></ul>
+                 
+                     <script type="text/javascript">var upload_link = "/{{ name }}/{{ num }}/upload"; var validate_link = "/{{ name }}/{{ num }}/validate"</script>
+                       <script src="/static/js/recorder.js"></script>
+                       <script src="/static/js/app.js"></script>
+            </div>
+            <div class="column2" >
+                <h2>Prediction</h2>
+                <div id="resultModel" class="glow" style="font-size: 20px;">
+                    <span></span>
+                </div>
+                <br>
+                <img id="image_div1" src="#" alt="Prediction bar-plot">
+                
+            </div>
+        </div>
+    </div>
+    {% extends "footer.html" %}
+    {% block footer%}fixed{% endblock %}
+    </body>
+    
+</html>

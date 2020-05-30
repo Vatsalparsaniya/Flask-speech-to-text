@@ -1,0 +1,25 @@
+
+<div class="topnav" id="myTopnav">
+  <a href="/" class="active">Home</a>
+  <!-- <a href="/Face_Detection/">Face Detection</a> -->
+  <!-- <a href="/variational_autoencoder/">Variational Autoencoder</a> -->
+  <a href="/mnist/">MNIST</a>
+  <!-- <a href="/plant_patholog/">Plant Pathology</a> -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+  {% for category,message in messages %}
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>{{category}} :</strong> {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+{% endwith %}
