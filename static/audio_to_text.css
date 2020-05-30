@@ -1,0 +1,85 @@
+
+.column1 {
+    float: left;
+    width: 30%;
+    height: 400px; /* Should be removed. Only for demonstration */
+    background-color: #fff;
+  }
+  
+  .column2 {
+    float: left;
+    width: 70%;
+    height: 400px; /* Should be removed. Only for demonstration */
+    background-color: #0f4da6;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+    background-color: #060073;
+  }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column1 {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column2 {
+      width: 100%;
+    }
+  }
+  
+  #imgInp {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  label {
+    cursor: pointer;
+    /* Style as you please, it will become the visible UI component. */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 100%;
+    color: #fff;
+    border-radius: 25px;
+    background-color: #0f4da6;
+    
+  }
+
+  #blah{
+      max-width: 60%;
+      max-height: 60%;
+  }
+
+  #image_div1{
+    max-width: 70%;
+      max-height: 70%;
+  }
+
+  #stop,#start{
+    cursor: pointer;
+    /* Style as you please, it will become the visible UI component. */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 100%;
+    color: #fff;
+    border-radius: 25px;
+    background-color: #0f4da6;
+    margin-top: 10%;
+  }
