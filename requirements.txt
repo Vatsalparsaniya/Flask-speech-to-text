@@ -1,0 +1,10 @@
+gunicorn
+flask
+SpeechRecognition
+python-dev
+python
+python-pip
+build-essential
+swig 
+libpulse-dev
+pocketsphinx
