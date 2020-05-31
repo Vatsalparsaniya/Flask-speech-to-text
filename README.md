@@ -1,6 +1,6 @@
 # Speech-to-Text
 ## Heroku Deploy here : [https://speech-to-text1.herokuapp.com/](https://speech-to-text1.herokuapp.com/)
-### (Flask + Heroku + SpeechRecognition + Recorderjs)
+### (Flask + Heroku + SpeechRecognition + [Recorderjs](https://github.com/mattdiamond/Recorderjs))
 
 1) Flask is a micro web framework written in Python.
 2) SpeechRecognition Library for performing speech recognition, with support for several engines and APIs, online and offline.
